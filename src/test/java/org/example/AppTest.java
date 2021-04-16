@@ -1,6 +1,6 @@
 package org.example;
 import org.junit.*;
-import org.junit.rules.Timeout;
+import org.junit.experimental.categories.Category;
 
 import static org.junit.Assert.*;
 
@@ -31,7 +31,10 @@ public class AppTest {
     @Test
     public void checkVisible() {
         assertTrue("True wasnt return", app.checkVisible());
+        //fail("This is an auto 'failed' message");
     }
+
+    @Category(ExampleInterfaceMethod.class)                                       //How to call interface class
 
     @Test
     public void sumTest() {
@@ -58,6 +61,11 @@ public class AppTest {
 
         assertSame("Objects are not same", num1, num2);
         assertSame("Objects are not same", num1, num3);
+    }
+
+    @Test
+    public void loginTest(){
+
     }
 
     @After
