@@ -18,6 +18,10 @@ public class AppTest {
         assertTrue("True değer gelmedi" , app.checkVisible());
     }
 
+    @Test
+    public void sumTest(){
+        assertEquals("Toplama işlemi hatalı", 2 , app.sum(-3,5));
+    }
 
 
 }
